@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comprar</title>
+</head>
+<style>
+    .div{
+        position: relative;
+        background-color: red;
+        width: 50%;
+        height: 500px;
+        left: 25%;
+        border-radius: 25%;
+        text-align: center;
+    }
+    .img_back{
+        width: 5%;
+        height: 10%;
+    }
+     .go-back{
+        width: 25%;
+    }
+        input{
+        border-radius: 10px;
+        height: 35px;
+    }
+    label{
+        font-size: 150%;
+        color: black;
+    }
+    button{
+        padding: 10px;
+        height: 50px;
+        width: 50px;
+    }
+</style>
+<body>
+<div>
+    <a href="http://127.0.0.1:5001"><img class="img_back" src="https://cdn.onlinewebfonts.com/svg/img_167578.png" alt="esc"></a>
+</div>
+
+<div class="div">
+    <form class="grid" action="/buyingResult" method="POST">
+        <label class="buy-text"><br>Compra <br>ingredientes: </label>
+        <br>
+        <input type="text" name="buy" id="buy">
+        <br><br>
+        <button>ok</button>
+    </form>
+<!--    <div class="colored">-->
+<!--        <img src="https://cdn2.iconfinder.com/data/icons/freecns-cumulus/32/519791-101_Warning-128.png" alt="warning">-->
+<!--        <label class="">It should open a recipe with: {{text}}</label>-->
+<!--        <img src="https://cdn2.iconfinder.com/data/icons/freecns-cumulus/32/519791-101_Warning-128.png" alt="warning">-->
+<!--    </div>-->
+<!--    <form class="grid" action="/search" method="POST">-->
+<!--        <button>Apreta el boton para abrir una la receta con {{text}}</button>-->
+<!--    </form>-->
+</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Ideas cocina</title>
+    <style>
+    .title{
+        font-family: Copperplate;
+        color: red;
+        text-align: center;
+    }
+    body{
+        background-color: white;
+    }
+    .center{
+        text-align: center;
+    }
+    input{
+        border-radius: 10px;
+        height: 35px;
+    }
+    label{
+        font-size: 150%;
+        color: black;
+    }
+    .colored{
+        background-color: rgba(255,0,0,0.3);
+        border-radius:10px;
+        border: 3px solid;
+        border-color:red;
+        color:white;
+        margin: 10%;
+    }
+    button{
+        padding: 10px;
+        height: 50px;
+        width: 50px;
+    }
+    .buy-text{
+        padding: 20px;
+    }
+    .warning_label{
+        font_size = 300%
+    }
+    .Title_background{
+        background-color: red;
+        position: fixed;
+        padding: 40px;
+        width: 50%;
+        height: 5%;
+        left: 25%;
+        border-radius: 50px;
+        align: center;
+        z-index: 10;
+    }
+    header > h1{
+        display: inline-block;
+        text-align: center;
+    }
+    header label{
+        margin-left: 100px;
+    }
+    .mag_glass{
+        width: 50%;
+        height: 50%;
+    }
+    .img_car{
+        width: 100%;
+        height: 100%;
+    }
+    .link_button{
+        position: relative;
+        bottom: -100px;
+        margin-left: 290px;
+        width: 60%;
+        border-radius: 25px;
+        background-color: lightgray;
+        padding: 50px;
+    }
+    </style>
+    </head>
+<body>
+
+<h1 class="title">Ideas de cocina</h1>
+<form class="grid" action="/buyPage" method="POST">
+    <button style="margin-left: 1450px;"><img class="img_car" src="https://pngimg.com/uploads/shopping_cart/shopping_cart_PNG20.png" alt="carrito"></button>
+</form>
+<form class="center grid" action="/result" method="POST">
+    <div class="center Title_background">
+        <label>Ingredientes:</label>
+        <input type="text" name="search" id="search">
+        <button>
+            <img src="https://pluspng.com/img-png/png-lupa-buscar-lupa-512.png" alt="lupa" class="mag_glass">
+        </button>
+        <br>
+    </div>
+    <br><br>
+    <br><br>
+</form>
+<div>
+    {% if link %}
+    <div class="center link_button"><a href={{link}}>Receta de {{text}}</a></div>
+    <br>
+    <div class="center link_button"><a href={{linv}}>Receta de {{text}}</a></div>
+    <br>
+    <div class="center link_button"><a href={{lin}}>Receta de {{text}}</a></div>
+    <br>
+    <div class="center link_button"><a href={{linr}}>Receta de {{text}}</a></div>
+    <br>
+    <div class="center link_button"><a href={{lon}}>Receta de {{text}}</a></div>
+    {% endif %}
+</div>
+</body>
+</html>
